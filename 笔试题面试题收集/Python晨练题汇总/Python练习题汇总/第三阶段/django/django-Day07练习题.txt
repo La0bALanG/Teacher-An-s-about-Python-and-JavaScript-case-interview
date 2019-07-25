@@ -1,0 +1,10 @@
+1、请解释一下cookie 和 session各自的特点
+    cookie：http协议是无状态的，所以前端浏览器使用cookie记录访问信息。 不安全，很容以被获取
+    session  也是用来存储访问信息，但是在后端存储。session的技术需要依赖于cookie
+
+2、如何自定义user，请简述步骤
+    1. 在setting中设置要使用的user模型  
+       AUTH_USER_MODEL = 'loginapp.User'
+    2. 在响应的应用的models中写User类，该类应该继承AbstractUser
+      from django.contrib.auth.models import AbstractUser
+    3. 在admin中注册后即可同步数据库 进入admin查看

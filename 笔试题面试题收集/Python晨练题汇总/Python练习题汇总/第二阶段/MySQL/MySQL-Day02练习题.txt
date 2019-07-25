@@ -1,0 +1,46 @@
+练习：
+(1). 请在custumers表中筛选出工资在3000-8000之间的人的姓名，年龄和工资
+select name,age,salary from customers where salary>= 3000 and salary <=8000;
+
+(2). 请把custumers表中id值为3的信息年龄更改为33，address更改为"NewYork"
+update customers set age=33,address='NewYork' where id=3;
+
+(3). 删除custumers表中id为3,并且salary为10000的信息
+delete from customers where id=3 and salary=2200;
+
+(4). 请去除address中的重复地址，并统计数量
+select address,count(*) from customers group by address;
+
+(5). 请查询custumers表中的工资中包含 5 这个数字的信息
+select * from customers where salary like "%5%";
+
+(6). 请查询custumers表的 age 以2开头的信息
+select * from customers where age like "2%";
+
+(7). 查询custumers表中信息的地址，平均年龄，并按照地址分组，
+      筛选出平均年龄大于20岁的数据，
+      并按平均年龄降序排列，
+      取前2条记录
+
+select address,avg(age) from customers group by address having avg(age)>20 order by avg(age) desc limit 2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+练习：
+1. 关于进程、线程、协程
+    CPU密集时使用：Python多进程
+    IO密集时使用：Python多线程，多协程
+
+2. 有一个socket名为sock，请写出如下语句：
+    绑定本地的5210端口：sock.bind((‘localhost’,5210))
+    将端口设置为非阻塞：sock.setblocking(False)
+
+3. 请写出HTTP中如下状态代码的说明：
+    403 Forbidden：服务器拒绝请求
+    404 Not Found：服务器找不到请求的网页
+
+4. select模型中最多支持__1024__个连接，__pool__模型突破了这个限制

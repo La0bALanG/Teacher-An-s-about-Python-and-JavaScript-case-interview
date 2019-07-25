@@ -1,0 +1,14 @@
+
+1、向控制台输出一句话："Hello console!"
+    console.log("Hello console!");
+
+2、向网页内容区输出一句话："Hello document!"
+
+3、请查看字符"张无忌"的Unicode码
+
+4、var score=99
+    请查看score的数据类型
+
+5、回忆：num++   和 ++num 有什么区别 
+
+6、"10" === 10  是true 还是 false

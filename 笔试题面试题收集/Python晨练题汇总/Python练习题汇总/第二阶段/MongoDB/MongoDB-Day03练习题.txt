@@ -1,0 +1,21 @@
+1、将orders集合中的文档，对各个status对应的结果进行分组，把status和相应的amount的平均值打印出来
+db.orders.aggregate(
+    {$group:{_id:"$status",average:{$avg:"$amount"}}}
+)
+
+2、将order里，amount小于300或者大于400的文档提取出来
+db.orders.aggregate(
+    {$match:
+        {$or:[
+                {amount:{$lt:300}},
+                {amount:{$gt:400}}
+             ]
+         }
+    }
+)
+
+3、查找学生集合中Section是A的学生的StudentName,Section和Marks
+db.Student.aggregate([
+  {$match:{Section:"A"}},
+  {$project:{_id:0, StudentName:1, Section:1, Marks:1}}
+])

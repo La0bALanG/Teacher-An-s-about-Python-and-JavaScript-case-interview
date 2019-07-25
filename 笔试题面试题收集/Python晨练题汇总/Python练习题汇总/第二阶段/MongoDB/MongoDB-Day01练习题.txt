@@ -1,0 +1,31 @@
+
+ 练习：
+ 1. 到test库下，查看库中的所有集合
+     use test
+     show collections
+
+ 2. 查看集合：users 中的所有文档(记录)
+     db.users.find().pretty()
+
+ 3. 在users表中添加一条文档，内容如下:
+ 	'name': 'Bob',
+ 	'age': 25
+ 	'sex': 'F'
+ 	'location': 'Shanghai'
+
+ 	db.users.insert{
+ 	'name': 'Bob',
+ 	'age': 25
+ 	'sex': 'F'
+ 	'location': 'Shanghai'
+ 	}
+ 4. 将'name'为'Bob'的文档中 'location'改为'Shenzhen'
+ 	db.users.update(
+	{name:"Bob"},
+	{$set:
+		{"location": "Shenzhen"}
+	}
+	)
+
+ 5. 删除'name'为'Bob'的文档
+    db.mycol.remove({'name': 'Bob'})

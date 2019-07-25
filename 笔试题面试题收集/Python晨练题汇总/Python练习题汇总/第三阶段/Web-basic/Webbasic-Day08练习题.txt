@@ -1,0 +1,14 @@
+1、设置或获取元素节点的属性的方法有哪些？
+    1、getAttribute(attrName)
+    2、setAttribute(attrName,attrValue);
+    3、removeAttribute(attrName)
+
+2、请说明什么是事件 以及 触发鼠标事件的行为有哪些？
+    事件：通过用户的行为来激发的操作
+    触发鼠标事件的行为如下：
+        click : 鼠标单击事件
+        dbclick : 鼠标双击事件
+        mouseover : 鼠标滑过事件
+        mouseout : 鼠标移出事件
+        mousedown : 鼠标按下事件
+        mouseup : 鼠标抬起事件

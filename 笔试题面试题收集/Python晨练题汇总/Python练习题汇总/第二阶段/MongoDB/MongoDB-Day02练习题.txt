@@ -1,0 +1,13 @@
+
+练习：
+1. 查询集合post中的信息，只显示title，隐藏_id和price
+    db.post.find({},{title:1,_id:0,price:0})
+
+2. 查询集合post中的信息，隐藏_id，并把得到的结果按照price升序排列，显示前两条信息
+    db.post.find({},{_id:0}).sort({'price':1}).limit(2)
+
+3. 查询集合post中的信息，只显示前3行的信息
+    db.post.find({}).limit(2)
+    
+4. 查询food集合中，既包含apple又包含banana的文档有哪些？
+    db.food.find({'fruit':{$all:['apple','banana']}})

@@ -1,0 +1,17 @@
+练习：
+编写一个shell脚本，要求实现：
+1.  在/home/tarena/aid1709下创建文件夹：mydir
+    cd /home/tarena/aid1709
+    mkdir mydir
+    
+2.  在/etc下查找passwd文件，把屏幕所有输出重定向到：mydir/result.txt
+  find /etc -name "passwd" &> mydir/result.txt
+
+3.  再result.txt文件末尾添加字符串："此为passwd文件查找屏幕所有输出"
+    echo "此为passwd文件查找屏幕所有输出" >> result.txt
+
+4.  将result.txt打包压缩为result.tar.gz
+    tar -zcvf result.tar.gz result.txt
+
+5.  再将result.tar.gz解压到/home/tarena/目录下
+    tar -zxvf result.tar.gz -C /home/tarena/

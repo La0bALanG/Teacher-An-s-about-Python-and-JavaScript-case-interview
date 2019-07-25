@@ -1,0 +1,25 @@
+练习：
+1. 创建一个表infos，要求 id 是int类型并且不为空，且是主键，  name varchar(20) ,  age int, score int
+create table infos(
+id int not null primary key,
+name varchar(20),
+age int,
+score int
+);
+
+2. 在表infos中插入3条数据，id分别为1,2,3
+insert into infos(id) values (1),(2),(3);
+
+3. 创建一个表infos2，id int , name varchar(20), course varchar(30), 要求外键id为infos表中的id
+create table infos2(
+id int ,
+name varchar(20),
+course varchar(30),
+foreign key(id) references infos(id)
+);
+
+4. 在infos2中随意插入两条数据，其中一条数据的course内容为‘MySQL’
+insert into infos2 values(1, 'lili', 'chinese'),(2, 'tom', ‘MySQL’);
+
+5. 用update 将课程为MySQL的学生成绩改为100
+update infos set score=100 where id = (select id from infos2 where course='MySQL');

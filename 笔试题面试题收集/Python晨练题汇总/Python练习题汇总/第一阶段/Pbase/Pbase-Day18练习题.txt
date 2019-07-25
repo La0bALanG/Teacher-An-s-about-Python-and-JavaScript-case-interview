@@ -1,0 +1,39 @@
+﻿练习1：
+class Student:
+	def __init__(self,name,age,score):
+		self.name,self.age,self.score = name,age,score
+	def __repr__(self):
+		return "Hello world"
+	def infos(self):
+		m = "Hello China"
+		print(m)
+	def __str__(self):
+		return self.infos()
+
+s1 = Student("Bob",30,88)
+print(s1)   
+请问执行结果是什么？理解其中的原因
+TypeError: __str__ returned non-string (type NoneType)
+
+
+
+练习2：
+请写出以下运算符的重载函数
+算数运算符：+ 、- 、 *、 / 、 **、//
+__add__   加法 +
+  __sub__   减法 -
+  __mul__   乘法 *
+  __truediv__  除法 /
+  __floordiv__  地板除 //
+  __pow__  幂 **
+复合赋值算数运算符：+= 、 *=
+__iadd__(self, other)    加法  self += other
+__imul__(self, other)    乘法  self *= other
+比较运算符：< 、 <= 、 > 、  >=
+ __lt__    小于 <
+  __le__    小于等于 <=
+  __gt__    大于 >
+  __ge__    大于等于 >= 
+
+
+

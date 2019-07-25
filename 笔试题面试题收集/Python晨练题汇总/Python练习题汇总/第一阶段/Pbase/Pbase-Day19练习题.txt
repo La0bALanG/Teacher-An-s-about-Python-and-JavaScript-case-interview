@@ -1,0 +1,13 @@
+1.什么是迭代器？
+  可以通过next函数取值的对象就是迭代器
+
+2.什么是重载:
+    用自定义的规则实现之间的运算符操作或函数操作
+
+3.def f(str,times):
+     print str*times
+  如何重载f函数
+  f(str1,str2,times1=1,times2=1)
+     print str1*times1
+     print str2*times2
+  

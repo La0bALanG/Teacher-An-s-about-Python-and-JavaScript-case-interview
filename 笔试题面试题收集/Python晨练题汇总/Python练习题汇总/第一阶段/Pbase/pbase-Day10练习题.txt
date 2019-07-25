@@ -1,0 +1,39 @@
+﻿练习1. 现有如下程序：
+    def  myfun1(a):
+        global a
+        a = 111
+        b = 222
+        def myfun2(b):
+            nonlocal b
+
+    myfun1(3)
+    运行此程序会出错吗？为什么会出错？
+
+会出错
+因为函数中的形参名字不能和 global 变量名 或者 nolocal 变量名 的名字相同
+
+练习2. 
+程序1：			                 程序2：
+def fn():                                                def fn():
+    def fn2():				            def fn2():
+	print("Hello world")                               print("Hello world")
+    return fn2                                          return fn2()
+a = fn()				       a = fn()
+a()					       print (a)
+问题：程序1和程序2的执行结果分别是什么？请明白为什么是这样
+程序1执行结果：
+hello world
+程序2执行结果：
+hello world
+None
+
+练习3. 
+在/home/tarena下创建一个目录mydir，在mydir下创建文件myfile，在myfile中输入内容：I am the best
+将mydir目录打包压缩为mydir.tar.gz，将mydir.tar.gz解压到~/aid1711/下
+
+$ cd ~
+$ mkdir mydir
+$ touch myfile
+$ echo "I am the best" > ~/mydir/myfile
+$ tar -zcvf mydir.tar.gz ~/mydir
+$ tar -zxvf mydir.tar.gz -C ~/aid1711/

@@ -1,0 +1,26 @@
+练习：
+1. 在MongoDB中，类似于MySQL中的joins连接的聚合函数是哪个？
+
+2. 能返回一个文档中两个数组中的相同部分的聚合函数是哪个？
+    查看集合Text中Array1和Array2数组中的相同部分
+
+3. 用pymongo操作MongoDB数据库：
+    (1). 导入MongoDB相关模块
+        import pymongo
+
+    (2). 连接到MongoDB客户端的默认主机和默认端口，变量名为client
+        client = MongoClient()
+
+    (3). 创建数据库test_database
+        db = client.test_database
+
+    (4). 创建集合test_collection
+        collection = db.test_collection
+
+    (5). 插入一条文档及多条文档方法：
+        插入一条文档：insert_one()    
+        插入多条文档：insert_many()
+
+    (6). 查询一条文档及多条文档方法：
+        查询一条文档：find_one()    
+        查询多条文档：find_All()

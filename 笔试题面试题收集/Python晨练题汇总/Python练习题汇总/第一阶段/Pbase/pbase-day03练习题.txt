@@ -1,0 +1,30 @@
+<!-- pbase-day03练习题答案.txt -->
+练习
+1. 输出字符串： Tom's pet is a cat.The cat's name is "Tiechui"   #用转意符号实现
+    str = "Tom\'s pet is a cat.The cat\'s name is \"Tiechui"
+    print(str)
+
+
+2. 输出字符串： (0)：石头
+(1)：剪刀
+(2)：布
+请输入您的选择(0/1/2)：
+    number = int(input("请输入您的选择(0/1/2)："))
+    if number == 0 :
+        print("石头")
+    elif number ==1 :
+        print("剪刀")
+    elif number ==2 :
+        print("布")
+    else:
+        print("输入有误，请重新输入：")
+
+3. a = "Py"
+    b = "thon"
+    c = 3
+    请输出结果：Python  3    #输出结果中Py和thon之间不能有空格
+        print(a+b,c)
+
+4. 计算字符串长度的函数
+    str = input("str:")
+    len(str)

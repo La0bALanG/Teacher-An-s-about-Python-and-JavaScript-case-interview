@@ -1,0 +1,36 @@
+<!-- pbase-day04练习题答案.txt -->
+练习
+1. 编写一个小程序要求实现如下输出：
+    请输入名字：
+    请输入年龄：
+    "名字" 今年 "年龄" 岁        #使用占位符
+    name = input("请输入姓名：")
+    age =int(input("请输入年龄："))
+    print("%s今年:%d岁"%(name,age))
+
+2. str1 = "    My name is Mr Green"
+    str2 = "HELLO"
+    要求分别实现以下输出
+    (1). "My name is Mr Green"
+    (2). "Mr Green"
+    (3). "    My Name Is Mr Green"
+    (4). "     HELLO"   #宽度为10
+    (5). "hello"
+    (6). 输出str1和str2中长度最长的字符串的长度   # max()
+        str1 = "    My name is Mr Green"
+        str2 = "HELLO"
+        #    (1). "My name is Mr Green"
+        print(str1.lstrip())
+        # (2). "Mr Green"
+        index = str1.find("Mr")
+        print(str1[index:])
+        # (3). "    My Name Is Mr Green"
+        print(str1.title())
+        # (4). "     HELLO"   #宽度为10
+        str = " "*(10-len(str2))
+        str+=str2
+        print(str)
+        # (5). "hello"
+        print(str2.lower())
+        # (6). 输出str1和str2中长度最长的字符串的长度   # max()
+        print(max(len(str1),len(str2)))

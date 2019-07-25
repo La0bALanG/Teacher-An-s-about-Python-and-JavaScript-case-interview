@@ -1,0 +1,45 @@
+练习：
+(1). 请关闭mysql服务
+      sudo /etc/init.d/mysql stop
+(2). 请开启mysql服务c
+      sudo /etc/init.d/mysql start
+
+(3). 创建一个数据库myDB，并在库中创建表myexcel，表中的字段分别有name varchar(20), phnumber int, height int,  liking varchar(25)
+
+create database myDB;
+
+create table myexcel(
+name varchar(20),
+phnumber int,
+height int,
+liking varchar(25)
+);
+
+
+(4). 一次性在表中插入4条数据，4条数据中height的值分别为：80 、 90 、 100、 110，查看表中内容
+insert into myexcel(name,phnumber,height,liking) 
+values 
+('name1', 90,80,'like1'),
+('name2', 90,90,'like2'),
+('name3', 90,100,'like3'),
+('name4', 90,110,'like4');
+
+select * from myexcel;
+
+
+(5). 利用myexcel创建一个新表new_myexcel，新表中包含name和phnumber两列，新表中内容为原表中height<100的，查看新表中内容
+create table new_myexcel(
+name varchar(20),
+phnumber int
+);
+
+insert into new_myexcel(name, phnumber)
+select name,phnumber from myexcel where height<100;
+
+(6). 直接删除数据库myDB
+drop database myDB;
+
+
+
+
+

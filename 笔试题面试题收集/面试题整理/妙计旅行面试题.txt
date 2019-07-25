@@ -1,0 +1,219 @@
+1.python 主要内置数据类型都有那些？print dir('a')的输出？
+	python可变数据类型：列表list[ ]、字典dict{ }、集合 set（）、字节数组bytearray 
+	python不可变数据类型：整型int、字符串str' '、元组tuple（）、布尔bool ,
+	复数complex , 浮点型float ,字节 bytes ……
+
+2.给定两个listA,B,请用python找出A、B中相同的元素和不同的元素？
+	lista = [1,2,3,4,5,6,'hello','world']
+	listb =[2,6,'hello','tarena','python']
+	set_a = set(lista)
+	set_b = set(listb)
+	equal_set = set_a&set_b
+	print(set_a,set_b)
+	print('相同的元素是：',equal_set)
+	print('不相同的元素是：',(set_a|set_b)-equal_set)
+
+3.请反转字符串aStr
+	s_old = 'aStr'
+	lst = list(s_old)
+	lst.reverse()
+	s_new = ''.join(lst)
+	print(s_new)
+	
+4.交换变量a,b的值
+	a , b  = b , a
+
+5.请指出下面代码存在的问题
+    def lastindextem(src,index)
+        '''请返回传入src，使用空格或者'\'切分后的倒数第index个子串’‘’
+        return src.split('\')[-index]
+	
+	  答: 1、如果传入的参数index不是int类型 会报 TypeError 类型错误
+				2、如果传入的参数index>len(src) 会报 IndexError 值错误，数组下标越界
+
+
+6.请写出以下程序的输出
+    a = 'abc'
+    print (a[1])
+    a[1] = 'a'
+    print (a[1]) 答 第一个print成功打印'a' a[1]='a'报错TypeError字符串是不可变类型
+--------------------------
+    class Parent(Object):
+        x = 1
+    class Child1(Parent):
+        pass
+    class Child2(Parent):
+        pass
+    print Parent.x,Child1.x,Child2.x
+    Child.x = 3
+    print Parent.x,Child1.x,Child2.x
+    Parent.x = 'a'
+    print Parent.x,Child1.x,Child2.x
+		答:	1 1 1
+				1 3 1
+				a 3 a
+
+----------------------------------------
+    def count():
+        fs = []
+        for i in range(1,4):
+            def f():
+                return i*i
+            fs.append(f)
+        return fs
+
+    for f in count():
+        print f()
+
+		答: 9   9   9
+--------------------------------------
+    def f(x,l=[]):
+        for i in range(x):
+            l.append(i+i)
+        print l
+
+    f(3)
+    f(3,[3,2,1])
+    f(2)
+
+		答:
+		[0, 2, 4]
+		[3, 2, 1, 0, 2, 4]
+		[0, 2, 4, 0, 2]
+
+---------------------------------------
+用一个select语句输出每个城市中距离市中心大于20KM酒店数
+
++------------+------------+--------+
+|name        | city_id    |distance|
++------------+------------+--------+
+|a酒店        |1000        |8       |
+|xx酒店       |1000        |22      |
+|xx酒店       |1000        |6       |
+......
+|xx酒店       |1001        |55      |
+
+答:
+select count(name) from where distance > 20
+
+
+编程题：
+有一个3G大小的文件，文件每行一个string,内容为酒店的id和图片的名字，使用'\t'分割
+示例：ht_1023134 + '\t' + hissnogin123.jpg
+表示的是一个酒店包含的一张图片，统计含有图片数量>20的酒店id,含有图片数量为10-20的酒店id,含有图片5-10,0-5的酒店id,并将结果输出到文件中
+文件格式为
+0-5 + '\t' + id1 + '\t' + id2 + ........
+5-10 + '\t' + id1 + '\t' + id2 + ........
+10-20 + '\t' + id1 + '\t' + id2 + ........
+20-无穷大 + '\t' + id1 + '\t' + id2 + ........
+
+
+f = open('hotel.txt', 'rb')
+lst_hotelId = []
+lst_hotelImg = []
+# 读取文件　放入列表中
+while True:
+    data = f.readline().decode()[:-2]
+    if not data:
+        f.close()
+        break
+    hotel_id, hotel_img = data.split('\t')
+    hotel = data.split('\t')
+    lst_hotelId.append(hotel_id)
+    lst_hotelImg.append(hotel_img)
+
+lst_count1 = []
+lst_count2 = []
+lst_count3 = []
+lst_count4 = []
+# 根据ＩＤ列表中相同ＩＤ　数分类
+for x in lst_hotelId:
+    if lst_hotelId.count(x) <= 5:
+        if lst_count1.count(x) == 0:
+            lst_count1.append(x)
+    elif lst_hotelId.count(x) > 5 and lst_hotelId.count(x) <= 10:
+
+        if lst_count2.count(x) == 0:
+            lst_count2.append(x)
+    elif lst_hotelId.count(x) > 10 and lst_hotelId.count(x) <= 20:
+
+        if lst_count3.count(x) == 0:
+            lst_count3.append(x)
+    else:
+        if lst_count4.count(x) == 0:
+            lst_count4.append(x)
+fw = open('count1.txt', 'wb')
+s1 = '0-5\t\t'+'\t'.join(lst_count1)+'\n'
+s2 = '5-10\t'+'\t'.join(lst_count2)+'\n'
+s3 = '10-20\t'+'\t'.join(lst_count3)+'\n'
+s4 = '20-无穷大\t'+'\t'.join(lst_count4)+'\n'
+fw.write((s1+s2+s3+s4).encode())
+fw.close()
+print('write success!')
+
+
+编程题2：
+给定一个int list a,满足a[i+1]>=a[i], 给定int key, 找出list a 中第一个大于等于key的元素的index,无法满足要求的元素返回-1
+函数定义：
+
+def findindex（int_list,int_key):
+    if int_key<len(int_list) and int_key>=0 :
+        return int_key+=1
+    else:
+        return -1
+
+
+加分题：
+
+一、正则表达式：
+
+1.正则匹配中贪婪模式与非贪婪模式的区别
+	贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，
+	贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，
+	而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配。
+	非贪婪模式只被部分NFA引擎所支持。 
+	属于贪婪模式的量词，也叫做匹配优先量词，包括： 
+	“{m,n}”、“{m,}”、“?”、“*”和“+”。
+
+2.match/search函数的使用及区别
+	答:
+	match（）函数只检测RE是不是在string的开始位置匹配，
+	search()会扫描整个string查找匹配, 也就是说match（）
+	只有在0位置匹配成功的话才有返回，如果不是开始位置匹配成功的话，
+	match()就返回none
+3.请写出以字母或下划线开始，以数字结束的正则表达式
+	regex='^[_a-zA-Z].*[0-9]+$'
+二、HTTP协议状态码有什么用？列出你知道的HTTP协议的状态码，
+		然后讲出他们都表示什么意思
+		状态码位于HTTP Response 的第一行中，会返回一个”三位数字的状态码“和一个“状态消息”。
+		三位数字的状态码“便于程序进行处理， “状态消息”更便于人理解。
+
+		HTTP状态码的作用是：Web服务器用来告诉客户端，发生了什么事。
+		HTTP状态码被分为五大类
+	 					已定义范围			分类
+			1XX			100-101			信息提示
+			2XX			200-206			成功
+			3XX			300-305			重定向
+			4XX			400-415			客户端错误
+			5XX			500-505			服务器错误
+		常见状态码:
+			200 OK 服务器成功处理了请求（这个是我们见到最多的）
+			301/302 Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置
+			304 Not Modified（未修改）客户的缓存资源是最新的， 要客户端使用缓存
+			404 Not Found 未找到资源
+			501 Internal Server Error服务器遇到一个错误，使其无法对请求提供服务
+
+三、从输入http://www.mioji.com/到页面返回，中间都发生了什么？
+		1.在浏览器中输入URL
+		2.应用层DNS解析域名
+		3.应用层客户端发送HTTP请求
+		4.传输层TCP传输报文
+		5.网络层IP协议查询MAC地址
+		6.数据到达数据链路层
+		7.服务器接收数据
+		8.服务器响应请求
+		9.服务器返回相应文件
+	
+
+
+

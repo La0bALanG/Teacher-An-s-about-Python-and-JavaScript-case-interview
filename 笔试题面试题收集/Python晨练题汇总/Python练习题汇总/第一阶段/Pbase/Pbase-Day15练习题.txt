@@ -1,0 +1,34 @@
+练习1：
+现有一个列表alist= ['hello','world']，写一个程序要求实现如下输出：  
+index 0：hello
+index 1：world
+
+alist = ['hello','world']
+for x,y in enumerate(alist):
+	print("index %s: %s" % (x,y))
+
+练习2：
+写一个程序，要求实现如下功能：
+(1). 创建一个文件student_info.txt
+(2). 在文件中写入如下两行内容：
+	name:Bob  age:30  score: 90
+	name:Lucy age:25  score: 99
+
+f = open('student_info.txt','w')
+f.write("name:Bob  age:30  score: 90\n")
+f.write("name:Lucy age:25  score: 99\n")
+
+练习3：
+写一个生成器函数myyield()，将练习2中student_info.txt中的两行内容生成一个生成器
+然后用for语句打印这两行内容：
+
+def myyield():
+	f = open('student_info.txt','r')
+	while True:
+		n = f.readline()
+		if not n:
+			break
+		yield n
+		
+for x in myyield():
+	print(x)

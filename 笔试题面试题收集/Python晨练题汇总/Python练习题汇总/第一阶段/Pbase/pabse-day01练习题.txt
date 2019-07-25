@@ -1,0 +1,32 @@
+<!-- pabse-day01练习题答案.txt -->
+1. Python变量的命名规则
+        变量名的长度不受限制，但其中的字符必须是字母、数字、或者下划线（_），而不能使用空格、连字符、标点符号、引号或其他字符。
+        变量名的第一个字符不能是数字，而必须是字母或下划线。
+        Python区分大小写。
+        不能将Python关键字用作变量名。
+
+2. 给变量a赋值为1，变量b赋值为2，然后删除变量a,b
+        a, b = 1, 2
+        del a, b
+
+3. 请编写hello.py程序输出"Hello world!"，并用两种方式执行此程序
+    1.命令行运行hello.py　-->　python3  hello.py
+    2.采用脚本方式运行python程序　
+            编写hello.py如下：
+                #!/usr/bin/env python3
+                print("Hello World")
+            ubuntu 下运行hello.py
+            － 设置hello.py有执行属性(权限)
+            － chmod a+x hello.py
+            － ./hello.py
+
+4. Python中数据类型有哪四种，其中布尔类型有哪些值
+        整型，浮点型，复数，空值None
+
+5. 下面哪个不是Python的合法标识符()
+    A int32 B、40XL      C、self  D、_name_
+    　B
+
+6.超市某款面条12元一罐，请问lucy带100元最多买多少罐，找零多少？
+        n = 100//12
+        m = 100%12

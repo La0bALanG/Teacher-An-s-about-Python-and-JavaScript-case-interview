@@ -1,0 +1,20 @@
+练习：
+1. 请写出如下三条语句的作用：
+    background-color:red;   # 将背景颜色设置为红色
+    background-image:url(images/a.jpg);  # 背景图片设置为images文件夹下的a.jpg文件
+    background-repeat:repeat-x;   # 只在横向平铺
+
+2. 请回忆如下属性及取值的作用：
+    background-attachment：fixed;   # 背景图固定
+    background-position:50 50;         # 背景图像的水平偏移位置为50px，背景图像的垂直偏移位置为50px
+    font-family:"simhei";                    # 指定字体为微软雅黑
+    font-size:20px;                           # 指定字体大小为20px
+    font-weight:bold;                        # 字体加粗
+    
+    text-align:center;                        # 行内元素的水平对齐方式为居中对齐
+    text-decoration:underline;           # 指定某元素中文字的线条修饰为下划线
+
+3. 以下两句话什么意思，有作用吗？
+    border-collapse:collapse;          # 合并边框模式
+    border-spacing:10px 10px;        # 设置单元格与单元格之间的水平距离为10px，水平距离为10px
+    

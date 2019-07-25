@@ -1,0 +1,10 @@
+1、请写出url(regex, views, kwargs = None,name = None)中每个参数代表的含义
+    regex : 正则表达式，用来匹配request请求中的url
+    views ：URL处理函数，自己写的，系统自带的
+    kwargs：字典，用来向views传参
+    name：给当前的URL起一个名字，常配合模板标签｛%url%｝使用
+
+2、请简述模板的加载顺序 
+    1. 先从DIRS配置的文件夹中查找模板
+    2. 如果1未找到，会自动从注册的app文件夹下找templates文件夹，在这个文件夹下查找目标 （APP_DIRS = True）
+    3.如果均未找到则表示没有找到需要的模板，如果找到一个则不会继续向下寻找

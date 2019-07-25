@@ -1,0 +1,21 @@
+﻿练习：
+1. from multiprocessing import Process
+2. import time
+3. 
+4. def myfn1(n):
+5. 
+6.     print("Hello,Mr Green.")
+7. 
+8. if __name__ == '__main__':
+9.       p = Process(target=myfn1,args=(1,))
+10.
+11.     p.start()
+12. 
+13.    
+14.     print("I am Lucy.")
+
+问题：
+1.请问程序执行结果是什么　　
+2.在第13行插入 time,sleep(1),请问执行结果是什么，将此行注释继续下一题　
+3.在第5行插入time.sleep(3) 在第10行插入：p.daemon = True,请问执行结果是什么　
+4.第5行插入time.sleep(3),在第12行插入p.join(),请问执行结果是什么　　　

@@ -1,0 +1,27 @@
+﻿练习1：
+找到计算平方和的程序，
+def Cal(n):
+    sum = 0
+    for i in range(n):
+       sum += i*i
+    return sum
+..........
+请解释为什么输出结果中前面会有两个0   
+
+练习2：
+找到管道的程序，
+.......
+.......
+(conn1,conn2) = Pipe()
+#创建并启动消费者进程
+con_p = Process(target=consumer,args=((conn1,conn2),))
+con_p.start()
+# 启动生产者进程
+conn1.close()
+seqeunce = [1,2,3,4,5]
+producer(seqeunce,conn2)
+conn2.close()
+请解释：为什么输出结果都是1 2 3 4 5 Consumer done，
+这两个进程不是随机执行的吗？如果先执行了消费者进程在执行的时候如果取不到元素了不是会报错吗？
+既然捕捉到错误了为什么还会输出1 2 3 4 5 Consumer done呢？
+

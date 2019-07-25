@@ -1,0 +1,832 @@
+#!usr/bin/env python3
+# print("hello world!")
+
+# print("我是安伟超！")
+
+# print("我来自天津达内！")
+# a = 1
+# b = 2
+# c = 3
+# d = a + b + c
+# print(d)
+
+
+
+#指定一个圆的半径，计算其周长，面积
+# r,PI = 5,3.14
+# s = 2 * r * PI
+# d = PI * r * r
+# print(s)
+# print(d)
+# a,b = 1,"安伟超"
+# res = a is not b 
+# print(res)
+# print(int(1234))
+# print(int("2345"))
+# a = 1
+# b = "安伟超"
+# print(bool(a is b))
+# a = 3
+# print(abs(a))
+# b = 2
+# print(round(b,-2))
+# print(pow(b,a))
+# a = 1 + (2 + 3) 
+# + (4 + 5)
+# # print(a)
+# a = (1 + 2 
+# + 3)
+# print(a)
+# val = input("请输入一串字符：")
+# print(val)
+# val = int(input("请输入年份："))
+# if val%4==0 and val%100!=0 or val%400==0:
+#     print("您输入的年份为润年!")
+# else:
+#     print("您输入的年份为平年！")
+# print("anweichao")
+# a = """abc
+# de"""
+# print(a)
+# str = "AASLHFJKASFJSDKLFJKLDSJF"
+# print(len(str))
+# print(str[2])
+# num = "12345"
+# str = "ABCDE"
+# print(str + num)
+# num = 12345
+# print(str(num))
+#str = "SJDASJKFJASKLFJKLASJFKLSDJKLFJZ"
+# print(str[2:8:3])
+# print(max(str))
+# print(ord(str[0]))
+# print(str.isdigit())
+# fmt = "姓名: %s, 年龄: %d, 至今．．．"
+# n = "weimingze"
+# a = 35
+# print(fmt % (n, a))
+# str1 = "我叫安伟超,我今年%d岁啦，我是%s生"
+# age = 18
+# sex = "男"
+# print(str1 %(age,sex))
+# user = "tarenacode"
+# password = "code_2013"
+# i = 0
+# while i<3: 
+#     userInput = input("请输入您的用户名：")
+#     passwordInput = input("请输入您的密码：")
+#     if userInput != user and passwordInput != password:
+#         print("登录失败，用户名或密码验证错误，请再次尝试！")
+#         i+=1
+#         if i==3:
+#             print("登录失败，请找回用户名或密码！")
+#             break
+#     else:
+#         print("登录成功！")
+#         break    
+# str1 = "KAAJSJKDAJKLDJASKJDKLASJD"
+# for key in str1:
+#     print("key:",key)
+# inpt = input("请输入字符串：")
+# i = 0
+# for key in inpt:
+#     if key == 'a':
+#         i+=1
+# print("当前字符串中a字符出现的次数为：",i)
+# num = int(input("请输入一个数字："))
+# for row in range(1,num+1):
+#     for col in range(row,row+num):
+#         print(col,end=" ")
+#     print()   
+# arr = [1,2,3,4,5]
+# arr[2] = 5.55
+# print(arr)
+
+# arr1 = [1,2,3]
+# arr2 = [5,6,arr1]
+# print(arr2)
+# arr3 = arr2.copy()
+# print(arr3)
+# arr3[2][1] = 3.3
+# print(arr2)
+# print(arr3)
+
+# str1 = "ADADADASDASDSAFSD,NFJKDSJGNDKSGHJDSNGMNDFMS,GNM,DSFNG"
+# print(str1.split(sep=None))
+# arr = [x for x in range(1,11,3)]
+# print(arr)
+# s1 = "ABCDEF"
+# s2 = "123456"
+# arr = [x+y for x in s1 for y in s2]
+# print(arr)
+# arr = (1,2,3,4,5)
+# print(arr)
+# arr = tuple(range(1,101))
+# arr1 = tuple(range(2,102))
+# arr3 = arr + arr1
+# print(arr.index(99))
+# obj = {
+#     "age":25,
+#     "sex":"男",
+#     "name":"安伟超"
+# }
+# print("我叫：",obj["name"],",我是",obj["sex"],"生，我今年",obj["age"])
+# def fun(a,b):
+#     return a+b
+# a = 1
+# def fun():
+#     a = 2
+#     print(a)
+# fun()
+# print(a)
+# def fun():
+#     print(a)
+#     a = 1
+# fun()
+# a = 1
+# def fun():
+#     b = 2
+#     def fun1():
+#         c = 3
+#         def fun2():
+#             d = 4
+#             print(e)
+#         fun2()
+#     fun1()
+#     def fun3():
+#         e = 5
+#     fun3()
+# fun()
+# def fun():
+#     a = 1
+#     return def function():
+#         a+=1
+# num = fun()
+# num()
+# def fun(a,b,c,d,e):
+#     return a + b + c + d + e
+# num = fun(1,2,3,4)
+# print(num)
+# s = [1,2,3,4,5,6]
+# def fun(s):
+#     return s+=1
+# num = fun(*s)
+# print(num)
+# def fun(a,b,c):
+#     return a+b+c
+# num = fun(b=2,c=3,a=1)
+# print(num)
+#练习：数组去重
+# arr = [1,1,2,4,2,4,5,6,7,8,3,4,55,34,3,2,3,4,3,3,2,4,5,6,7]
+# res = []
+# for key in arr:
+#     if key not in res:
+#         res.append(key)
+# print(res)
+
+# s = "我操"
+# print("我说:" + s)
+# def fun(a):     
+#     def fun1(b):
+#         print(a,b)
+#     return fun1
+# intr = fun("强哥我想你啦")
+# intr("但是强哥没我帅！哈哈哈哈")
+# a = 1
+# def fun():
+#     global a
+#     a = 2
+# fun()
+# print(a)
+# def fun1():
+#     a = 1
+#     def fun2():
+#         nonlocal b
+#         b = 2
+#     fun2()
+#     def fun3():
+#         c = 3
+#         print(b)
+#     fun3()
+# fun1()
+# num = 1
+# def fun():
+#     num = 2
+#     print(num)
+#     def fun1():
+#         nonlocal num
+#         num+=1
+#         print(num)
+#     fun1()
+#     print(num)
+# fun()
+# print(num)
+# 练习：输入一个数字，判断其是否是素数
+# def is_sushu():
+#     num = int(input("请输入一个数字："))
+#     b = 0
+#     if num==0 or num==1:
+#         print("0或１不是素数！")
+#     elif num==2:
+#         print("您输入的是素数！")
+#     else:
+#         for key in range(2,num):
+#             if num%key==0:
+#                 b = 1
+#         if b==1:
+#             print("您输入的数字不是素数！")
+#         else:
+#             print("您输入的数字是素数！")
+#     print(b)
+# is_sushu()
+# def power(a):
+#     return a ** 2
+
+# for x in map(power,range(1,10)):
+#     print(a,"** 2","=",x,end=" ")
+
+# # print(
+# def isodd(n):
+#     return n % 2 ==0
+# # print([x for x in filter(isodd,range(1,20))])
+# print(sorted([x for x in filter(isodd,range(-20,20))],key=abs,reverse=True))
+# print(sorted([x for x in ["Tom","Bac","Hdj"],reverse=True))
+# 递归调用实例
+# def fun(x,y):
+#     print(x,"+",y,"=",x+y)
+#     if x ==9 and x == 9:
+#         return
+#     a = x + 1
+#     b = y + 1
+#     fun(a,b)
+# fun(1,1
+# def factor(fun):#装饰器函数，传入的参数为一个函数
+    # return fun#返回传入的函数
+# def deco(fun):
+#     print("装饰器被调用啦")
+#     def sunzi():
+#         print("哈哈换人啦")
+#     return sunz
+# @ deco
+# def son():
+#     print("我自己被调用啦")
+# son()
+# son()
+# son()
+# function fun(){
+#     var a = 1;
+#     return function(){
+#         a++;
+#     }
+# }
+# def apple(n):
+#     print("一共有",n,"个苹果，请问怎么分")
+#     inpt = int(input("请输入人数："))
+#     res = n / inpt
+#     print("每人分到",res,"个苹果")
+# try:
+#     apple(10)
+# except ZeroDivisionError:
+#     print("错误已经处理，程序继续执行")
+# print("后续程序继续执行．．．")
+# L = [23123,213423424,234234234,233432424,234324234,23423424,23]
+# it = iter(L)
+# print(it)
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# res = open("./Myfile.txt")
+# print("文件打开成功")
+# res.close()
+# print("文件已经关闭")
+
+
+# 编写第一个类
+# 　class Student:
+#     age = 19
+#     sex = "男"
+#     name = "安伟超"
+#     def fun(self,city):
+#         print("我叫",)
+
+
+# class Pc:
+#     __slots__ = ["size","color","model"]
+#     def __init__(self,size,color,model):
+#         self.size = size
+#         self.color = color
+#         self.model = model
+#     def buyPc(self):
+#         print("昨天我买了一个",self.color,"的笔记本，大小为",self.size,"型号为",self.model)
+
+
+# acer = Pc("17.3英寸","红色","VN7-591g")
+# # acer.Model = "E48"
+# acer.buyPc()
+# # print(acer.__dict__)
+# print(isinstance(acer,Pc))
+
+#手写迭代器
+# class myodd:
+#     def __init__(self,begin,end):
+#         if begin % 2 == 0:
+#             begin+=1
+#         self.begin = begin
+#         self.end = end
+
+#     def __str__(self):
+#         return "myodd(%s)" % [x for x in range(self.begin,self.end,2)]
+
+#     def __iter__(self):
+#         self.current = self.begin
+#         return self
+
+#     def __next__(self):
+#         if self.current>=self.end:
+#             raise StopIteration
+#         self.res = self.current
+#         self.current+=2
+#         return self.res
+
+
+# odd = myodd(2,10)
+# print(odd)
+# it = iter(odd)
+# print(next(odd))
+# print(next(odd))
+# print(next(odd)) 
+# print(next(odd))
+# print(next(odd))   
+
+# python中的单继承
+
+
+# class Cat:
+#     def run(self,speed):
+#         print("猫正在以%d米每秒的速度在跑"% speed)
+#     def eat(self,what):
+#         print("猫平时吃%s"% what)
+
+
+# class Jiafei(Cat):
+#     def play(self,what):
+#         print("加菲喜欢玩%s"% what)
+#     def eat(self,what):
+#         print("覆盖啦，加菲喜欢玩%s"% what)
+
+# meiduanCat = Cat()
+# meiduanCat.run(20)
+# meiduanCat.eat("猫粮")
+# doudou = Jiafei()
+# doudou.run(30)
+# doudou.eat("鸡腿")
+# doudou.play("小球")
+# print(Jiafei.__base__.__base__.__base__)
+
+
+# 继承间的引用关系
+# class A:
+#     def fangfa1():
+#         print("A类调用")
+
+
+# class B(A):
+#     def fangfa2():
+#         print("B类调用")
+
+
+# class C(B):
+#     def fangfa3():
+#         print("C类调用")
+
+
+# class D(C):
+#     def fangfa4():
+#         print("D类调用")
+
+# print(D.__base__.__base__.__base__.__base__.__base__)
+# D.__base__.__base__.__base__.__base__
+
+# # super()的使用
+# class A:
+#     def fangfa(self):
+#         print("你现在调用的是Ａ类的方法！")
+
+
+# class B(A):
+#     def fangfa(self):
+#         print("你现在调用的是Ｂ类的方法！")
+
+
+# # a = A()
+# # a.__class__.fangfa()
+
+# b = B()
+# b.fangfa()   
+# super(B,b).fangfa()
+# print(1 / 3)
+
+
+#创建进程练习
+
+# from multiprocessing import Process
+# import time
+#
+#
+# def getTime(interval):
+#     while True:
+#         time.sleep(interval)
+#         print(time.ctime())
+#
+#
+# if __name__ == "__main__":
+#     p = Process(target=getTime,args=(1,))
+#     p.start()
+
+
+# print("hahaha")
+
+
+#fork创建进程
+
+
+# import os
+#
+#
+# pid = os.fork()
+# #当前程序就是一个进程，在当前进程中继续创建一个子进程，并复制全部父进程的代码段
+# if pid < 0:
+#     print("创建进程失败")
+# elif pid == 0:
+#     print("子进程中返回")
+#     print("当前子进程的ＰＩＤ号为：",os.getpid())
+#     print("当前子进程的父进程的进程号为：",os.getppid())
+# else:
+#     print("父进程中返回")
+#     print("当前父进程的进程号为：",os.getpid())
+#
+# print("******分割线**********")
+
+
+
+#僵尸进程处理
+
+
+
+# import os,sys
+# from time import sleep
+#
+#
+# aid = os.fork()
+# if aid < 0:
+#     print("当前进程子进程创建失败！")
+# elif aid == 0:
+#     print("当前由子进程返回！")
+#     sleep(10)
+#     # sys.exit(3)
+# else:
+#     os.wait()
+#     print("当前由父进程返回！")
+
+
+#练习
+
+
+
+# import os,sys
+# from time import sleep
+#
+#
+#
+# aid = os.fork()
+# if aid < 0:
+#     pass
+# elif aid == 0:
+#     pid = os.fork()
+#     if pid < 0:
+#         pass
+#     elif pid == 0:
+#         print("二级子进程正在执行！")
+#         sleep(3)
+#         os._exit(2)
+#     else:
+#         print("一级子进程正在执行！")
+#         # sleep(3)
+# else:
+#     os.wait()
+#     print("父进程正在执行！")
+#
+# print("*******分割线*********")
+
+# import multiprocessing as mp
+# import os
+# from time import sleep
+# # lis = [x for x in range(5)]
+# # print(lis)
+
+# def study(res):
+#     print(os.getpid())
+#     print(res)
+#     sleep(3)
+
+
+# if __name__ == '__main__':
+#     pool = mp.Pool(processes = 4)
+#     for i in range(10):
+#         res = '打印数字：%d'%i
+#         pool.apply_async(study,(res,))
+#     pool.close()
+#     pool.join()
+# # p = mp.Process(target=study)
+# # p.start()
+# # # print("当前父进程的进程号：",os.getpid())
+
+
+# x = [x for x in range(1,10)]
+# print(len(x))
+
+
+#字符串截取
+
+
+
+# s = "ADASSDASDASD"
+# print(s[1:7])
+
+
+# print([x for x in range(1,11)])
+
+# s = [x for x in range(1,11)]
+# # s.append("AS")
+# # print(s)
+# a = s.reverse
+# print(a)
+
+
+# # print(tuple([x for x in range(3)]))
+# x = tuple([x for x in range(5)])
+# # num = x.index(2)
+# # print(num)
+# num = x.count
+# def isodd(x):
+#     return x % 2 == 0
+
+
+# l = [x for x in filter(isodd,range(1,21))]
+# print(l)
+
+# def isodd(x):
+#     return x % 2 == 0
+# s = "print([x for x in filter(isodd,range(1,21))])"
+# exec(s)
+
+
+
+# import sys
+
+# print(sys.version)
+
+#迭代器
+
+
+
+# def fun():
+#     yield "a"
+#     yield "b"
+#     yield "c"
+#     return "没有啦"
+
+
+# print(next(iter(fun())))
+
+# s = (a * 3 +1 for a in range(1,4))
+
+# print(next(iter(s)))
+# print(next(iter(s)))
+# print(next(iter(s)))
+
+
+#repr  str 函数重写
+
+
+# class Mynumber:
+#     def __init__(self,value):
+#         self.data = value
+
+
+#     def __repr__(self):
+#         return "Mynumber(%d)"%self.data
+
+
+#     def __str__(self):
+#         return "%s"%self.data
+
+# m1 = Mynumber(100)
+# m2 = Mynumber(200)
+
+# print(repr(m1))
+# print(str(m1))
+
+
+#装饰器
+
+# def mydef(fn):
+#     def fun1(name):
+#         print("my name is:%s"%name)
+#     return fun1
+# @mydef
+# def fun(name):
+#     print("我叫：%s"%name)
+# # fun = mydef(fun)
+# hum1 = fun("安伟超")
+
+
+
+
+
+
+#导入multiprocessing 中的process和ｐｉｐｅ
+
+
+# from multiprocessing import Process,Pipe
+# import os
+# import time
+
+# begin,end = Pipe()
+
+# def work(odd):
+#     sleep(1)
+#     begin.send('10以内的偶数为：'　+ str(odd))
+#     print(""os.getppid())
+
+
+
+
+# for num in range(10):
+#     if (num % 2 == 1):
+
+
+# for num in range(10):
+#     if (num % 2 == 1):
+#         continue
+#     print(num)
+
+# a = 100000
+# b = 100000
+# print(a is b)
+
+
+
+
+
+
+
+
+# a = 10000
+# b = 10000
+#变量必须先声明再赋值
+#变量可以只声明但不赋值么？
+# a
+# print(a)
+# a = 12
+# b=13
+# print(a,b)
+# a=1
+# b=1
+# print(a===b)
+# input(我是学生)
+
+# rstrsxrstr
+# import copy
+
+# L1 = [1,2,3]
+# L2 = [1,2,L1,4,5]
+
+# # L4 = L2.copy()
+# # print(L4)
+# # L2[0] = "A"
+# # print(L2)
+# # print(L4)
+# L4 = copy.deepcopy(L2)
+# print(L4)  
+# L1 = 'A'
+# L2 = 'B'
+# print(L4)
+
+# l=[]
+# a=0
+# b=1
+# end=0
+# for x in range(20):
+#     b=a
+#     end=b
+#     end=a+b
+#     l.append(x)
+# print(l)
+
+# 0 1 1 2 3 5 8 
+
+
+
+# a = int(input("请输入第一个数字："))
+# b = int(input("请输入第二个数字："))
+# c = int(input("请输入第三个数字："))
+# d = (a if a > c else c) if a > b else (b if b > c else c)
+# print("最大的数字是：",d)
+
+
+for i in range(1,5):
+    for j in range (1,5):
+        for k in range (1,5):
+            if i != j and i!= k and j != k:
+                print("%d%d%d",i,j,k) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

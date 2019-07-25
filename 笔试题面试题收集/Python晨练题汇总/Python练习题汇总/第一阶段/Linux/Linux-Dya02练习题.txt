@@ -1,0 +1,17 @@
+练习题
+ 	在/home/tarena下递归创建以下目录：test/dir1/dir2/dir3
+ 	    mkdir -p test/dir1/dir2/dir3
+
+	在dir3目录下创建文件：file1.txt、file2.txt
+	    cd test/dir1/dir2/dir3
+	    touch file1.txt  file2.txt
+
+	将file2.txt重命名为newfile2.txt
+	    mv file2.txt  newfile2.txt
+
+	将文件file1.txt的所有者添加执行(x)权限，将file2.txt的权限设置为744	
+	    chmod +x file1.txt
+	    chmod 744 file2.txt
+
+	删除test目录以及其目录下的所有子目录和文件
+	    rm -rf  /home/tarena/test/

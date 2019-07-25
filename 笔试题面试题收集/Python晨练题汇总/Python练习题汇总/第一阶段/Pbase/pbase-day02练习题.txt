@@ -1,0 +1,37 @@
+<!-- pbase-day02练习题答案.txt -->
+练习：
+1. 在/home/tarena下创建文件 excise.txt，并用echo语句实现添加内容："努力学习Python！"
+    将此文件压缩为excise.tar.gz，然后解压到目录 /home/tarena/aid1709/
+    ~$touch excise.txt
+    ~$echo 'kfajkljlajglkajgjakljklaj' >> excise.txt
+    ~$tar -czvf  excise.tar.gz    excise.txt
+    ~$tar -xzvf  excise.tar.gz  -C  ./aid1709
+
+
+
+2. 在/etc/passwd文件中筛选带有"root"字符串的行，并把筛选的结果重定向到当前目录的a.txt文件中，请写出具体命令
+     grep "root" /etc/passwd >> excise.txt 
+
+3. 如何把字符串"6.6"转换为浮点型，请写出语句
+    >> float("6.6")
+
+4. 编写程序：
+    小明身高1.75米，体重80.5kg。请根据BMI公式(体重除以身高的平方)帮小明计算他的BMI指数，并根据BMI指数：
+    低于18.5：过轻
+    18.5-25：      正常
+    25-28：    过重
+    28-32：    肥胖
+    高于32：     严重肥胖
+    用if-elif判断并打印结果
+    bmi = 80.5/(1.75)**2
+    if bmi < 18.5 :
+        print("过轻")
+    elif 18.5<= bmi < 25 :
+        print("正常") 
+    elif 25<= bmi < 28 :
+        print("过重") 
+    elif 28<= bmi < 32 :
+        print("肥胖") 
+    elif 32< bmi :
+        print("严重肥胖") 
+

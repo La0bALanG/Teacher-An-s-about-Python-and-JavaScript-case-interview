@@ -1,0 +1,30 @@
+<!-- pbase-day07练习题答案.txt -->
+1.  s1 = "Welcome to China"
+    请生成列表 L 为 ['Welcome','to','China']
+    print(s1.split(' '))
+    s2 = ['hello','tar','gz']
+    请生成字符串 S 为 "hello.tar.gz"
+    print(".".join(s2))
+
+2. 请创建一个元组 T 为 (20,30,40,50,40,30,20)
+    请计算t中元素30的个数
+    t = (20,30,40,50,40,30,20)
+    print(t.count(30))
+3. 请创建一个字典 D 为 {"name": "Bob","age" : 30}   ##要求会用两种方法创建
+    请在字典D中创建新的键值对   "score" : 90
+    请把字典D中Bob的age改为：25
+    如何查看字典D中"age"的值
+    #要求会用两种方法创建
+D = {"name": "Bob","age" : 30}
+d = {}
+d['name'] = 'Bob'
+d['age'] = 30
+print(D,"\n",d)
+# 请在字典D中创建新的键值对   "score" : 90
+D['score'] = 90
+print(D)
+# 请把字典D中Bob的age改为：25
+D['age'] = 25
+print(D)
+# 如何查看字典D中"age"的值
+print("D中的age:",D['age'])

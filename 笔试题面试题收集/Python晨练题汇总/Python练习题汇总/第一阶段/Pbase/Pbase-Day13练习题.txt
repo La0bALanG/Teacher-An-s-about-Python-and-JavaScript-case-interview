@@ -1,0 +1,44 @@
+练习1：写一个程序，info.py
+要求：
+$ ./info.py  Bob 25       如果输入参数个数不正确则正常退出程序   # 用到sys模块中的方法
+执行结果输出：
+{ '姓名：'  :  'Bob' ，'年龄：' : 25 }    
+
+#!/usr/bin/env python3
+import sys
+
+if len(sys.argv) >= 3:
+    d = {"姓名":sys.argv[1],"年龄:":sys.argv[2]}
+    print(d)
+
+if len(sys.argv) < 3:
+    print("您输入的参数个数不正确")
+
+练习2：L = [1,2,2,'bob','lucy']
+(1).从L中返回随意元素
+(2).将L乱序 random.shuffle(L)
+(3). 从L中随机选择3个元素
+
+import random
+L = [1,2,2,'bob','lucy']
+s = random.choice(L)
+random.shuffle(L)
+s2 = random.sample(L,3)
+print(s,L,s2)
+
+练习3：
+现有包的结构如下：
+mypack/
+	__init__.py
+	software/
+		__init__.py     问题：
+		cp.py 			 (1)请编写pack.py,加载study下的English.py模块，请写出语句 
+	study/			      (2)如何实现当在pack.py中写入语句：from mypack import *  时只导入software子包     # __all__ 属性
+		__init__.py
+		English.py
+
+(1). import mpyack.study.English
+(2). from mypack import *
+	__all__ = ['software']
+
+

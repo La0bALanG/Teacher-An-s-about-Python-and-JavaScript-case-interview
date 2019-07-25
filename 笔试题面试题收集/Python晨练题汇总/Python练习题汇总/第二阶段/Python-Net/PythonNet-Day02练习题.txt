@@ -1,0 +1,59 @@
+
+1. Socket类型有几种，各自的特点是什么？
+   1）流式套接字(SOCK_STREAM)
+      流套接字用于提供面向连接、可靠的数据传输服务。tcp的套接字是这种类型
+   2) 数据报套接字（SOCK_DGRAM）,udp的套接字是这种类型
+
+2. 创建一个TCP套接字 t
+   t = socket(AF_INET, SOCK_STREAM)
+
+3. 创建一个UDP套接字 u
+   u = socket(AF_INET, SOCK_DGRAM)
+
+4. 请用套接字Socket中的方法名简单描述TCP的流程
+
+TCP服务器的流程：
+    1.socket创建一个套接字；
+     s = socket(AF_INET, SOCK_STREAM)
+    2.bind绑定到IP地址和端口号Prot；
+     s.bind(('127.0.0.1', 8082))
+    3.listen使得套接字变成一个被动链接；
+     s.listen(5)
+    4.accept等待客户端的链接；
+    # 收到通信的socket
+      clientS, clientAddr = s.accept()
+    5.recv/send接受数据；
+      clientS.send(timestr.encode('utf-8'))
+    6.close新产生的服务socket
+      clientS.close() 
+    7.在合适的时机，也可以把监听socket s也关闭
+      s.close()
+TCP客户端的流程：
+    1.socket创建一个套接字；
+    # 使用TCP通信
+     s = socket(AF_INET, SOCK_STREAM)
+    
+    2.连接到我们对应的端口和服务的位置
+    # 连接监听socket
+      s.connect(('127.0.0.1', 8082))
+    
+    3.连接上之后用来和服务端send,recv消息
+      tm = s.recv(1024)
+    
+    4.关闭socket     
+     s.close()
+
+
+ 
+
+5. 请用套接字Socket中的方法名简单描述UDP的流程
+UDP客户端流程：
+	1.创建套接字；socket
+	2.发送，接收数据；sendto/recvfrom
+	3.关闭套接字close
+
+UDP服务端流程：
+	1.创建套接字；socket
+	2.bind；
+	3.发送，接收sendto/recvfrom
+	4.考虑关闭套接字close
